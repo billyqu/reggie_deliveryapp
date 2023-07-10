@@ -9,6 +9,7 @@ import java.util.List;
 @Mapper
 public interface UserRegisterMapper extends BaseMapper<UserRegister> {
     List<UserRegister> listall();
-//    void register(String username, Integer userid);
+
+    void register(UserRegister newUser);
 
 }

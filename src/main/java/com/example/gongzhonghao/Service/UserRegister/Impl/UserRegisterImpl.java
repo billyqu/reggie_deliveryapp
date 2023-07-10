@@ -21,6 +21,13 @@ public class UserRegisterImpl extends ServiceImpl<UserRegisterMapper, UserRegist
         return userRegisterMapper.listall();
     }
 
+    @Override
+    public String register(UserRegister newUser) {
+        userRegisterMapper.register(newUser);
+        return newUser.getName();
+    }
+
+
 //    @Autowired
 //    private UserRegisterMapper userRegisterMapper;
 //    @Override

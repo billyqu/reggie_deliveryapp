@@ -6,6 +6,10 @@
 <mapper namespace="com.example.gongzhonghao.Mapper.UserRegisterMapper">
     <!--select查询语句-->
     <select id="listall" resultType="com.example.gongzhonghao.Domain.UserRegister">
-            select * from user
+            select * from employee;
     </select>
+
+    <insert id="register" parameterType="com.example.gongzhonghao.Domain.UserRegister">
+        insert into user values(null, #{no}, #{name}, #{password}, #{roleId}, #{isvalid})
+    </insert>
 </mapper>

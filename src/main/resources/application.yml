@@ -11,4 +11,13 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath:/mybatis_mapper/**/*Mapper.xml
-#  type-aliases-package: com.example.gongzhonghao.Domain
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+reggie:
+  path: /Users/billyqu/Desktop/study/java/img/

@@ -9,5 +9,8 @@ import java.util.List;
 public interface UserRegisterService extends IService<UserRegister> {
     List<UserRegister> listall();
 
+    String register(UserRegister newUser);
+
+
 //    String register(String username, Integer userid);
 }
